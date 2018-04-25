@@ -4,4 +4,4 @@
 
 技术栈:H5+layui UI库+jQuery+jQuery template.js+antV G6关系图类库
 
-前端页面地址：springboot-demo/src/main/resources/resources
+前端页面路径：springboot-demo/src/main/resources/resources
