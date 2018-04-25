@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建工作动态</title>
+</head>
+<link rel="stylesheet" href="../../../assert/css/toastr.css">
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="../../../assert/wangEdit/wangEditor.min.css">
+<body style="padding-top: 30px;padding-left: 30px;padding-right: 30px">
+
+<form class="layui-form layui-form-pane" action="">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">文章标题</label>
+        <div class="layui-input-block">
+            <input id="news_title" type="text" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">主题图片</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <input id="news_img" type="text" lay-verify="required" placeholder="图片名称" autocomplete="off" class="layui-input" readonly>
+        </div>
+        <div class="layui-word-aux" style="padding: 0;">
+            <button type="button" class="layui-btn" id="upload_news_img">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">消息类型</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <div class="layui-input-inline" style="width:250px;z-index: 19891013">
+                <select name="work_category" lay-verify="" lay-filter='create_news_category_filter'>
+                    <option value="WORK_CATEGORY_NULL">请选择</option>
+                    <optgroup label="新闻资讯">
+                        <option value="WORK_DYNAMICS">工作动态</option>
+                        <option value="INFORMATION_DISCLOSURE">信息公开</option>
+                    </optgroup>
+                    <optgroup label="质量信用管理">
+                        <option value="QUALITY_COMMITTED">质量信用承诺</option>
+                        <option value="QUALITY_REPORT">社会责任报告</option>
+                    </optgroup>
+                    <optgroup label="品牌建设">
+                        <option value="BRAND_CONSTRUCTION_APPRAISE">区域品牌价值评价</option>
+                        <option value="BRAND_COMMUNICATE">质量管理与品牌建设交流活动</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div id="editor">
+    <p>在此处编辑新闻</p>
+</div>
+
+<div style="width: 100%;text-align: center">
+    <button class="layui-btn" style="width: 60%;margin-top: 30px;margin-bottom: 30px"
+            onclick="create_news(news, editor)">提交动态
+    </button>
+</div>
+
+<script src="../../../assert/js/extends/jquery-3.2.1.min.js"></script>
+<script src="../../../assert/wangEdit/wangEditor.min.js"></script>
+<script src="../../../assert/js/extends/toastr.min.js"></script>
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/travischenn.js"></script>
+<script src="../../../assert/js/admin/create-news-dynamic.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+com\travischenn\platform\domain\VO\LayuiPage.class
+com\travischenn\platform\service\CommonService.class
+com\travischenn\platform\domain\DTO\FileInfo.class
+com\travischenn\platform\Exception\PageException.class
+com\travischenn\platform\util\RequestUtil.class
+com\travischenn\platform\domain\AEDIKCUF.class
+com\travischenn\platform\enums\ResultEnum.class
+com\travischenn\platform\util\ConvertUtil.class
+com\travischenn\platform\domain\VO\Message.class
+com\travischenn\platform\Exception\ExceptionHandler.class
+com\travischenn\platform\domain\DTO\UpdateBean.class
+com\travischenn\platform\deserializer\CustomJsonDateDeserializer.class
+com\travischenn\platform\util\PageUtil.class
+com\travischenn\platform\domain\VO\BaseMessage.class

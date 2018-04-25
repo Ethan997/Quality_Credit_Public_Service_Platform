@@ -1,0 +1,84 @@
+spring:
+#
+## 线下数据库配置
+  datasource:
+    username: "root"
+    password: "adminmysql"
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot-starter?characterEncoding=utf-8&useSSL=false
+
+#线上数据库配置
+#  datasource:
+#   username: "root"
+#   password: "uAiqwVwjJ8-i"
+#   driver-class-name: com.mysql.jdbc.Driver
+#   url: jdbc:mysql://39.108.222.55:3306/springboot_starter?characterEncoding=utf-8&useSSL=false
+
+  session:
+    store-type: none
+
+  redis:
+    password: adminredis
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  http:
+    multipart:
+      max-file-size: 100Mb
+      max-request-size: 1000Mb
+
+travischenn:
+
+  #认证控制
+  security:
+
+    #浏览器配置
+    browser:
+      login-page-url: /page/admin/login.html
+      auth-redirect-type: json
+      remember-me-second: 3600
+
+    # 验证码
+    valid-code:
+
+      # 图形验证码
+      image-code:
+        length: 4
+        filter-uri: /demo/helloWorld,/demo/1
+        expire-second: 3600
+        height: 38
+
+      # 短信验证码
+      sms-code:
+        length: 6
+        expire-second: 60
+        filter-uri: /demo/helloworld
+  news:
+    admin:
+      unique: QUALITY_COMMITTED/QUALITY_REPORT/BRAND_CONSTRUCTION_APPRAISE
+      list-limit: 10
+    web:
+      url: /news/**
+      statics: /assert/**
+      page: /page/font/**
+
+  file:
+    alibaba:
+      access-key-id: LTAIDZlwxaMAEJFk
+      access-key-secret: WILuvfV8x9dGC4XnBU7HCpQqbXMUpc
+      end-point: http://oss-cn-shenzhen.aliyuncs.com
+      bucket-name: travischenn-platform
+      access-url: http://travischenn-platform.oss-cn-shenzhen.aliyuncs.com
+
+server:
+  port: 80
+
+endpoints:
+  shutdown:
+  # 启用 shutdown
+    enabled: true
+
+
+logging:
+  path: /opt/log/tomcat
+  file: /opt/log/tomcat/springboot-starter.log

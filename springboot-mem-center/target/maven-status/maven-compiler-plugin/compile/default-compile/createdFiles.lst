@@ -1,0 +1,7 @@
+com\travischenn\platform\repository\MemberRepository.class
+com\travischenn\platform\repository\relation\MemberRoleRelationRepository.class
+com\travischenn\platform\domain\DTO\MemberDTO.class
+com\travischenn\platform\repository\RoleRepository.class
+com\travischenn\platform\domain\DO\Member.class
+com\travischenn\platform\domain\DO\relation\MemberRoleRelation.class
+com\travischenn\platform\domain\DO\Role.class

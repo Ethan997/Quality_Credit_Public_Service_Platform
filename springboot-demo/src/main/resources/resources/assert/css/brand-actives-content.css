@@ -1,0 +1,378 @@
+@media (min-width: 1290px) {
+  * {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  body {
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
+      sans-serif;
+    font-weight: 300;
+  }
+
+  .logo {
+    position: relative;
+    right: 1em;
+    padding-left: 1em;
+  }
+  .nav-top {
+    display: block;
+  }
+  .nav-side {
+    display: none;
+  }
+  .nav-side-link {
+    display: none;
+  }
+
+  .nav-search {
+    position: absolute;
+    width: 16%;
+    right: 10%;
+    top: 10px;
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 26px;
+    z-index: 100;
+  }
+
+  .nav-logo a {
+    color: #b8b9bd;
+  }
+
+  .nav-search-btn {
+    position: relative;
+    left: 100%;
+    bottom: 38px;
+    margin-left: 10px;
+  }
+
+  .layui-carousel {
+    height: 1000px;
+  }
+
+  .service-part:hover {
+    color: #837024;
+  }
+
+  .service-img {
+    width: 8em;
+    height: 8em;
+  }
+
+  .false-logo {
+    z-index: -100;
+  }
+
+  footer {
+    height: 200px;
+    background-color: #323640;
+    padding-top: 30px;
+  }
+
+  .footer-msg {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .footer-msg h3 {
+    padding: 20px 0;
+    color: white;
+  }
+
+  .footer-msg a {
+    font-size: 16px;
+    color: white !important;
+  }
+
+  .article-title {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 34px;
+  }
+  .article-msg {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .page-header__title-decoration {
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .page-header__title {
+    text-align: center;
+    color: rgb(7, 57, 109);
+  }
+
+  .news {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .news-nav {
+    text-align: center;
+    padding: 40px 0 40px 0;
+  }
+
+  .news-nav-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .news-content {
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .news-title {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .news-title a {
+    color: rgb(7, 57, 109);
+  }
+
+  .news-title a:hover {
+    color: #5fb878;
+  }
+
+  .meta-author {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  #nav-seleted {
+    color: #5fb878 !important;
+  }
+
+  article {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .article-content {
+    font-size: 16px;
+  }
+
+  .article-content p {
+    font-weight: 300;
+    margin-bottom: 25px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    color: #2f2f2f;
+    line-height: 27px;
+  }
+}
+@media (max-width: 1290px) {
+  * {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  body {
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
+      sans-serif;
+    font-weight: 300;
+  }
+
+  body {
+    background-color: white;
+    font-family:  "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
+      sans-serif;
+    font-weight: 300;
+  }
+
+  .logo {
+    position: relative;
+    right: 1em;
+    padding-left: 1em;
+  }
+  .nav-top {
+    display: none;
+  }
+  .nav-side {
+    display: none;
+  }
+  .nav-side-link{
+    height: 60px;
+    background-color: #393D49;
+  }
+  .nav-side-link-btn{
+    background-color: #393D49;
+    height: 40px;
+    width: 40px;
+    margin:10px 0 0 10px; 
+    border-radius:8px; 
+    position: absolute;
+    right: 1em;
+  }
+
+  .nav-search {
+    position: absolute;
+    width: 16%;
+    right: 10%;
+    top: 10px;
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 26px;
+    z-index: 100;
+  }
+
+  .nav-logo a {
+    color: #b8b9bd;
+  }
+
+  .nav-search-btn {
+    position: relative;
+    left: 100%;
+    bottom: 38px;
+    margin-left: 10px;
+  }
+
+  .layui-carousel {
+    height: 1000px;
+  }
+
+  .service-part:hover {
+    color: #837024;
+  }
+
+  .service-img {
+    width: 8em;
+    height: 8em;
+  }
+
+  .false-logo {
+    z-index: -100;
+  }
+
+  footer {
+    height: 200px;
+    background-color: #323640;
+    padding-top: 30px;
+  }
+
+  .footer-msg {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .footer-msg h3 {
+    padding: 20px 0;
+    color: white;
+  }
+
+  .footer-msg a {
+    font-size: 16px;
+    color: white !important;
+  }
+
+  .article-title {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 34px;
+  }
+  .article-msg {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .page-header__title-decoration {
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .page-header__title {
+    text-align: center;
+    color: rgb(7, 57, 109);
+  }
+
+  .news {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .news-nav {
+    text-align: center;
+    padding: 40px 0 40px 0;
+  }
+
+  .news-nav-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .news-content {
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .news-title {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .news-title a {
+    color: rgb(7, 57, 109);
+  }
+
+  .news-title a:hover {
+    color: #5fb878;
+  }
+
+  .meta-author {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  #nav-seleted {
+    color: #5fb878 !important;
+  }
+
+  article {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .article-content {
+    font-size: 16px;
+  }
+
+  .article-content p {
+    font-weight: 300;
+    margin-bottom: 25px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    color: #2f2f2f;
+    line-height: 27px;
+  }
+}
