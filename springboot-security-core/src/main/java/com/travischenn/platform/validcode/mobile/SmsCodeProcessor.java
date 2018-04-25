@@ -1,7 +1,7 @@
 package com.travischenn.platform.validcode.mobile;
 
 import com.aliyuncs.exceptions.ClientException;
-import com.travischenn.platform.domain.SmsCode;
+import com.travischenn.platform.domain.VO.SmsCode;
 import com.travischenn.platform.validcode.AbstractValidCodeProcessorImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

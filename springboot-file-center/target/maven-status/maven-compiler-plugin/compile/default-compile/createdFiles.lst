@@ -1,7 +1,0 @@
-com\travischenn\platform\config\FileConfig.class
-com\travischenn\platform\service\AlibabaOSSService.class
-com\travischenn\platform\service\impl\AlibabaOSSServiceImpl.class
-com\travischenn\platform\controller\FileController.class
-com\travischenn\platform\FUCKIDEA.class
-com\travischenn\platform\properties\FileCenterProperties.class
-com\travischenn\platform\properties\nest\AlibabaOSSProperties.class

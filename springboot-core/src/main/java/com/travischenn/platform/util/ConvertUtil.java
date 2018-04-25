@@ -1,6 +1,9 @@
 package com.travischenn.platform.util;
 
-import org.apache.commons.lang.StringUtils;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 
 /**
  * **************************************************************
@@ -15,18 +18,17 @@ import org.apache.commons.lang.StringUtils;
  */
 public class ConvertUtil {
 
-    public static boolean numberToBoolean(String value){
-
-        if(!StringUtils.isNumeric(value)){
-            throw new RuntimeException("只能对数字进行转换");
-        }
-
-        if(StringUtils.equals(value , "0")||StringUtils.equals(value , "1")){
-            return StringUtils.equals(value, "1");
-        }else{
-            throw new RuntimeException("只能对数字0|1进行转换");
-        }
-
+    /**
+     * Date -> LocalDateTime
+     *
+     * @param date java.util.Date 类型的时间对象
+     *
+     * @return LocalDataTime 时间对象
+     */
+    public static LocalDateTime DateToLocalDateTime(Date date) {
+        Instant instant = date.toInstant();
+        ZoneId zone = ZoneId.systemDefault();
+        return LocalDateTime.ofInstant(instant, zone);
     }
 
 }

@@ -1,91 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>工作动态</title>
+    <title>文章管理</title>
 </head>
-<link rel="stylesheet" href="../../../assert/css/toastr.css">
-<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
-<body style="padding-top: 10px">
 
-<blockquote class="layui-elem-quote news_search">
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<body>
+
+<blockquote class="layui-elem-quote">
     <div class="layui-inline">
         <div class="layui-form">
             <div class="layui-input-inline" style="width:250px">
-                <select name="work_category" lay-verify=""  lay-filter='news_category_filter'>
+                <select name="news_detail_category" lay-filter='news_detail_select_filter'>
                     <option value="WORK_CATEGORY_NULL">请选择</option>
-                    <optgroup label="新闻资讯">
-                        <option value="WORK_DYNAMICS" >工作动态</option>
+                        <option value="POLICY_AND_REGULATION_DOCUMENTS" >政策法规文件</option>
+                        <option value="WORK_DYNAMICS">工作动态</option>
                         <option value="INFORMATION_DISCLOSURE">信息公开</option>
-                    </optgroup>
-                    <optgroup label="质量信用管理">
-                        <option value="QUALITY_COMMITTED">质量信用承诺</option>
-                        <option value="QUALITY_REPORT">社会责任报告</option>
-                    </optgroup>
-                    <optgroup label="品牌建设">
-                        <option value="BRAND_CONSTRUCTION_APPRAISE">区域品牌价值评价</option>
-                        <option value="BRAND_COMMUNICATE">质量管理与品牌建设交流活动</option>
-                    </optgroup>
+                        <option value="QUALITY_CREDIT_COMMITMENT">质量信用承诺</option>
+                        <option value="QUALITY_CREDIT_FILE">质量信用档案</option>
+                        <option value="ACHIEVEMENTS_SHOW">成果展示</option>
+                        <option value="REGIONAL_BRAND_VALUE_EVALUATION">区域品牌价值评价</option>
+                        <option value="QUALITY_MANAGEMENT_AND_BRAND_BUILDING_EXCHANGE_ACTIVITIES">质量管理与品牌建设交流活动</option>
                 </select>
             </div>
-            <a class="layui-btn search_btn" onclick="reload_table(news.table_id , news.table_reload_url , news.current_news_type_en)">查询</a>
+            <a class="layui-btn" onclick="table_reload(news_detail_option)">查询</a>
         </div>
     </div>
     <div class="layui-inline">
-        <a class="layui-btn layui-btn-normal" onclick="create_tabs(news.create_options)">发表新内容</a>
+        <a class="layui-btn layui-btn-normal" onclick="create_tabs({id:10,icon:'fa-star-half-o',title:'发表新内容',url:'pages/create-news-detail.html'})">发表新内容</a>
     </div>
     <div class="layui-inline">
-        <a class="layui-btn layui-btn-normal newsAdd_btn" onclick="edit_tabs(news)">编辑内容</a>
+        <a class="layui-btn layui-btn-normal newsAdd_btn" onclick="create_tabs_by_id(news_detail_option , {id:11,icon:'fa-tag',title:'编辑内容',url:'pages/edit-news-detail.html'} , edit_news_detail)">编辑内容</a>
     </div>
     <div class="layui-inline">
-        <a class="layui-btn layui-btn-danger" onclick="delete_news(news , ',')">删除内容</a>
+        <a class="layui-btn layui-btn-danger" onclick="table_delete(news_detail_option)">删除内容</a>
     </div>
 </blockquote>
 
-<table id="demo" lay-filter="news_dynamic_table_filter"></table>
+<table id="news_detail_dom_id" lay-filter="news_detail_table_filter"></table>
 
-<script src="../../../assert/js/extends/jquery-3.2.1.min.js"></script>
-<script src="../../../assert/js/extends/toastr.min.js"></script>
 <script src="../../../assert/layui/layui.all.js"></script>
-<script src="../../../assert/js/travischenn.js"></script>
-<script src="../../../assert/js/news-detail.js"></script>
-<script type="text/html" id="auditStatusSwitchTpl">
-    {{#  if(d.auditStatus === "1"){ }}
-    <form class="layui-form" action="">
-        <div class="layui-form-item">
-            <div>
-                <input type="checkbox" name="{{d.id}}" lay-skin="switch" lay-text="开|" lay-filter="auditStatus" checked>
-            </div>
-        </div>
-    </form>
-    {{#  } else { }}
-    <form class="layui-form" action="">
-        <div class="layui-form-item">
-            <div>
-                <input type="checkbox" name="{{d.id}}" lay-skin="switch" lay-text="开|" lay-filter="auditStatus">
-            </div>
-        </div>
-    </form>
-    {{#  } }}
-</script>
-<script type="text/html" id="isShowSwitchTpl">
-    {{#  if(d.isShow === "1"){ }}
-    <form class="layui-form" action="">
-        <div class="layui-form-item">
-            <div>
-                <input type="checkbox" name="{{d.id}}" lay-skin="switch" lay-text="开|" lay-filter="isShow" checked>
-            </div>
-        </div>
-    </form>
-    {{#  } else { }}
-    <form class="layui-form" action="">
-        <div class="layui-form-item">
-            <div>
-                <input type="checkbox" name="{{d.id}}" lay-skin="switch" lay-text="开|" lay-filter="isShow">
-            </div>
-        </div>
-    </form>
-    {{#  } }}
-</script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/news-detail.js"></script>
 </body>
 </html>

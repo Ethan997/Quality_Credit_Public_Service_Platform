@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑文章</title>
+</head>
+
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<link href="https://cdn.bootcss.com/wangEditor/10.0.13/wangEditor.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdn.bootcss.com/wangEditor/10.0.13/wangEditor.min.js"></script>
+<body>
+
+<div style="margin-top: 20px;margin-left: 50px;margin-bottom:30px">
+    <div style="font-size: 25px;color: grey;">编辑文章</div>
+    <hr class="layui-bg-gray">
+</div>
+
+<form class="layui-form layui-form-pane" action="" style="margin-left: 50px;margin-right: 50px">
+    <div class="layui-form-item">
+        <label class="layui-form-label">文章标题</label>
+        <div class="layui-input-block">
+            <input id="news_title" type="text" name="title" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">文章类型</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <div class="layui-input-inline" style="width:250px;z-index: 19891013">
+                <select name="news_detail_category" lay-filter='news_detail_select_filter'>
+                    <option value="POLICY_AND_REGULATION_DOCUMENTS" >政策法规文件</option>
+                    <option value="WORK_DYNAMICS">工作动态</option>
+                    <option value="INFORMATION_DISCLOSURE">信息公开</option>
+                    <option value="QUALITY_CREDIT_COMMITMENT">质量信用承诺</option>
+                    <option value="QUALITY_CREDIT_FILE">质量信用档案</option>
+                    <option value="ACHIEVEMENTS_SHOW">成果展示</option>
+                    <option value="REGIONAL_BRAND_VALUE_EVALUATION">区域品牌价值评价</option>
+                    <option value="QUALITY_MANAGEMENT_AND_BRAND_BUILDING_EXCHANGE_ACTIVITIES">质量管理与品牌建设交流活动</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="edit_news_detail_editor">
+        <p>在此处编辑新闻</p>
+    </div>
+    <div style="width: 100%;text-align: center">
+        <button class="layui-btn" lay-submit="" lay-filter="edit_news_detail_button_filter" style="width: 60%;margin-top: 30px;margin-bottom: 30px">
+            提交动态
+        </button>
+    </div>
+</form>
+
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/edit-news-detail.js"></script>
+</body>
+</html>

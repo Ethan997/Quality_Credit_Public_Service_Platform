@@ -19,6 +19,11 @@
             <artifactId>springboot-core</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.travischenn</groupId>
+            <artifactId>springboot-security-browser</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
 
         <!--阿里云OSS文件服务-->
         <dependency>

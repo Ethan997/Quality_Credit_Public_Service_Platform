@@ -1,11 +1,11 @@
-@media (min-width: 1290px) {
+@media (min-width: 1016.1px) {
 
   * {
     -webkit-font-smoothing: subpixel-antialiased;
   }
 
   body {
-    background-color: #f2f2f2;
+    background-color: white;
     font-family:  "Helvetica Neue", Helvetica, Arial, "PingFang SC",
       "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
       sans-serif;
@@ -46,13 +46,11 @@
   }
   .banner img {
     width: 100%;
-    height: 500px;
   }
 
-  .layui-carousel {
-    height: 1000px;
+  .service{
+    padding: 30px 0 50px 0; 
   }
-
   .service-part:hover {
     color: #837024;
   }
@@ -133,37 +131,42 @@
     position: absolute;
     left: 2px;
     top: 600px;
-    z-index: 100px;
+    z-index: 100;
   }
 
+  .select-type{
+    background-color: white;
+    height:32px;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius:6px; 
+  }
   .mysearch {
-    padding: 30px 0 60px 0;
+    padding: 40px 0 90px 0;
     text-align: center;
   }
 
   .mysearch-input {
     width: 60%;
     height: 30px;
-    border-radius: 16px;
-    padding-left: 20px;
+    border-radius:6px; 
     outline: none;
     display: inline-block;
     border: 1px solid rgb(203, 203, 203);
+    padding-left: 2em;
   }
 
   .mysearch-input:focus {
+    border-left:0; 
     border: 1px solid orange;
   }
 
   .mysearch-btn {
-    height: 34px;
+    height: 33px;
     width: 60px;
-    border: 2px 2px 2px 2px;
     background-color: white;
     border: 1px solid rgb(203, 203, 203);
     border-radius: 16px;
     position: relative;
-    top: 2px;
   }
 
   .mysearch-btn:hover {
@@ -175,7 +178,8 @@
   }
 
   .index-news {
-    padding-bottom: 80px;
+
+    padding: 60px 0 80px 0;
   }
 
   .index-news-part-1 {
@@ -185,7 +189,7 @@
   .index-news-title-1 {
     color: #837024;
     text-align: center;
-    padding: 20px 0 0 0;
+    padding: 0px 0 0 0;
     font-size: 36px;
     font-weight:300;
   }
@@ -199,7 +203,7 @@
 
   .index-news-list {
     width: 50%;
-    height: 24.4em;
+    height: 25.4em;
     padding: 10px 0 10px 0;
     -moz-box-shadow: 1px 3px 8px #333333;
     -webkit-box-shadow: 1px 3px 8px #333333;
@@ -234,7 +238,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -247,13 +251,12 @@
     padding: 20px 0;
     color: white;
   }
-
-  .footer-msg a {
+  .footer-msg h4 {
+    color: white;
+  }
+  .footer-msg>span>a {
     font-size: 16px;
     color: white !important;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   .index-tab-content h2 {
@@ -286,16 +289,21 @@
   .index-tab-content a:hover {
     color: #5fb878;
   }
+  .index-news{
+    background-image:url(https://www.panshi18.com/upload/201710/1509023884.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+  }
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1016px) {
 
   * {
     -webkit-font-smoothing: subpixel-antialiased;
   }
 
   body {
-    background-color: #f2f2f2;
+    background-color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC",
       "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",
       sans-serif;
@@ -340,10 +348,10 @@
   }
   .nav-side-link{
     height: 60px;
-    background-color: #393D49;
+    background-color: #252d38;
   }
   .nav-side-link-btn{
-    background-color: #393D49;
+    background-color: #252d38;
     height: 40px;
     width: 40px;
     margin:10px 0 0 10px; 
@@ -353,11 +361,6 @@
   }
   .banner img {
     width: 100%;
-    height: 500px;
-  }
-
-  .layui-carousel {
-    height: 1000px;
   }
 
   .service-part:hover {
@@ -440,37 +443,46 @@
     position: absolute;
     left: 2px;
     top: 600px;
-    z-index: 100px;
+    z-index: 100;
   }
+  .select-type{
+    background-color: white;
+    height:32px;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius:6px; 
 
+
+  }
+  .layui-container{
+    padding: 0 0!important;
+  }
   .mysearch {
-    padding: 30px 0 60px 0;
+    padding: 10px 0 30px 0;
     text-align: center;
   }
 
   .mysearch-input {
-    width: 60%;
+    width: 46%;
     height: 30px;
-    border-radius: 16px;
-    padding-left: 20px;
+    border-radius:6px; 
     outline: none;
     display: inline-block;
     border: 1px solid rgb(203, 203, 203);
+    padding-left: 2px;
   }
 
   .mysearch-input:focus {
+    border-left:0; 
     border: 1px solid orange;
   }
 
   .mysearch-btn {
-    height: 34px;
+    height: 33px;
     width: 60px;
-    border: 2px 2px 2px 2px;
     background-color: white;
     border: 1px solid rgb(203, 203, 203);
     border-radius: 16px;
     position: relative;
-    top: 1px;
   }
 
   .mysearch-btn:hover {
@@ -482,7 +494,7 @@
   }
 
   .index-news {
-    padding-bottom: 80px;
+    padding: 60px 0 80px 0;
   }
 
   .index-news-part-1 {
@@ -505,8 +517,8 @@
   }
 
   .index-news-list {
-    width: 50%;
-    height: 24.4em;
+    width: 60%;
+    height: 25.4em;
     padding: 10px 0 10px 0;
     -moz-box-shadow: 1px 3px 8px #333333;
     -webkit-box-shadow: 1px 3px 8px #333333;
@@ -546,7 +558,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -559,13 +571,12 @@
     padding: 20px 0;
     color: white;
   }
-
-  .footer-msg a {
+  .footer-msg h4 {
+    color: white;
+  }
+  .footer-msg>span>a {
     font-size: 16px;
     color: white !important;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   .index-tab-content h2 {
@@ -597,5 +608,10 @@
 
   .index-tab-content a:hover {
     color: #5fb878;
+  }
+  .index-news{
+    background-image:url(https://www.panshi18.com/upload/201710/1509023884.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
   }
 }

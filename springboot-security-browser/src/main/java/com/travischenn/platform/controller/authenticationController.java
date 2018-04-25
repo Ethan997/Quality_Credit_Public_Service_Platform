@@ -1,7 +1,6 @@
 package com.travischenn.platform.controller;
 
-import com.travischenn.platform.domain.DTO.MemberDTO;
-import com.travischenn.platform.domain.VO.BaseMessage;
+import com.travischenn.platform.domain.VO.ResultBean;
 import com.travischenn.platform.enums.ResultEnum;
 import com.travischenn.platform.properties.SecurityProperties;
 import org.apache.commons.lang.StringUtils;
@@ -48,7 +47,7 @@ public class authenticationController {
 
     @RequestMapping("/require")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
-    public BaseMessage<String> authenticationDispatcher(HttpServletRequest request , HttpServletResponse response){
+    public ResultBean<String> authenticationDispatcher(HttpServletRequest request , HttpServletResponse response){
 
         //获取请求的URL
         SavedRequest savedRequest = requestCache.getRequest(request , response);
@@ -68,13 +67,13 @@ public class authenticationController {
             }
         }
 
-        return new BaseMessage<>( ResultEnum.UNAUTHORIZED,null);
+        return new ResultBean<>( ResultEnum.UNAUTHORIZED,null);
     }
 
     @GetMapping("/userDetail")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
-    public BaseMessage<String> sessionTimeOut(){
-        return new BaseMessage<>(ResultEnum.FAILED , "Session已过期");
+    public ResultBean<String> sessionTimeOut(){
+        return new ResultBean<>(ResultEnum.FAILED , "Session已过期");
     }
 
 }

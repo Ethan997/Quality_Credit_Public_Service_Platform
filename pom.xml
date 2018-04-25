@@ -28,9 +28,7 @@
         <module>springboot-security-app</module>
         <module>springboot-demo</module>
         <module>springboot-core</module>
-        <module>springboot-msg-center</module>
         <module>springboot-security-browser</module>
-        <module>springboot-mem-center</module>
         <module>springboot-file-center</module>
     </modules>
 

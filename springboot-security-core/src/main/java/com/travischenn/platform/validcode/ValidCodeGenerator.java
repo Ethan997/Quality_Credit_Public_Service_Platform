@@ -1,7 +1,5 @@
 package com.travischenn.platform.validcode;
 
-import com.travischenn.platform.domain.SmsCode;
-
 import javax.servlet.http.HttpServletRequest;
 
 /**

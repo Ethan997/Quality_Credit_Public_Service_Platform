@@ -1,7 +1,7 @@
 package com.travischenn.platform.handler.authentication;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.travischenn.platform.domain.VO.BaseMessage;
+import com.travischenn.platform.domain.VO.ResultBean;
 import com.travischenn.platform.enums.AuthRedirectType;
 import com.travischenn.platform.enums.LoginEums;
 import com.travischenn.platform.enums.ResultEnum;
@@ -49,11 +49,10 @@ public class AuthenticationFailedHandler extends SimpleUrlAuthenticationFailureH
         // 获取认证结果处理方式
         AuthRedirectType authRedirectType = securityProperties.getBrowser().getAuthRedirectType();
 
-        // 判断当前的响应结果
+        // 判断当前的响应结果 TODO 无法判断登录失败原因
         if(authRedirectType == AuthRedirectType.JSON){
-            // 返回认证失败的信息
-            response.setContentType("application/text;charset=UTF-8");
-            response.getWriter().write(objectMapper.writeValueAsString(new BaseMessage<>(ResultEnum.FAILED , LoginEums.LOGIN_IN_FAILED_BECAUSE_INVALID_USERNAME_PASSWORD.getDescribe())));
+            response.setContentType("application/json;charset=UTF-8");
+            response.getWriter().write(objectMapper.writeValueAsString(new ResultBean<>(ResultEnum.FAILED , "登录失败")));
         }else if(authRedirectType == AuthRedirectType.REDIRECT){
             super.onAuthenticationFailure(request , response , exception);
         }

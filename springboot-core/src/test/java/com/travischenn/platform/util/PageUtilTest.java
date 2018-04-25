@@ -24,15 +24,7 @@ public class PageUtilTest {
 
     @Test
     public void test() {
-
-
-        String a = "d";
-
-
-        String b[] = {"a" , "b" , "c"};
-
-        System.out.println(ArrayUtils.contains(b , a));
-
+        System.out.println(RegexpUtil.isUrl("http://regex.zjmainstay.cn/"));
     }
 
 }

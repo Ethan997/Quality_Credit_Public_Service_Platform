@@ -1,7 +1,6 @@
 package com.travischenn.platform.enums;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 /**
  * **************************************************************
@@ -17,6 +16,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public enum ResultEnum {
 
     SUCCESS("100001" , "操作成功"),

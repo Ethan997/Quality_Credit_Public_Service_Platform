@@ -1,4 +1,4 @@
-@media (min-width: 1290px) {
+@media (min-width: 1030.1px) {
 
   * {
     -webkit-font-smoothing: subpixel-antialiased;
@@ -62,7 +62,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -75,7 +75,9 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
     color: white !important;
@@ -91,7 +93,6 @@
   .page-header__title-decoration {
     display: block;
     margin: 0 auto;
-    padding-top: 40px;
   }
 
   .section-content {
@@ -112,17 +113,31 @@
     right: 1px;
   }
 
-  td,
-  th {
-    text-align: center !important;
+  .feedback-list{
+    border-left:1px solid gainsboro; 
   }
-  thead th {
-    color: #786520;
-    font-weight: 900 !important;
-    font-size: 16px !important;
+  .feedback-list{
+    height: 390px;
+    overflow-y:scroll; 
+  }
+  .feedback-list-h1{
+    text-align:center;
+    color: rgb(7, 57, 109);
+    padding-bottom:10px;
+    font-size: 2em; 
+  }
+  .feedback-list-p{
+    padding: 10px 10px;
+    border-bottom:1px solid gainsboro; 
+    display: block;
+  }
+  .feedback-list-p span{
+    color: #837024;
+    margin-left:8%;
+    font-weight: 700;
   }
 }
-@media (max-width: 1290px) {
+@media (max-width: 1030px) {
 
 
   * {
@@ -149,10 +164,10 @@
   }
   .nav-side-link{
     height: 60px;
-    background-color: #393D49;
+    background-color: #252d38;
   }
   .nav-side-link-btn{
-    background-color: #393D49;
+    background-color: #252d38;
     height: 40px;
     width: 40px;
     margin:10px 0 0 10px; 
@@ -197,7 +212,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -210,7 +225,9 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
     color: white !important;
@@ -226,7 +243,6 @@
   .page-header__title-decoration {
     display: block;
     margin: 0 auto;
-    padding-top: 40px;
   }
 
   .section-content {
@@ -247,13 +263,27 @@
     right: 1px;
   }
 
-  td,
-  th {
-    text-align: center !important;
+  .feedback-list{
+    border-left:1px solid gainsboro; 
   }
-  thead th {
-    color: #786520;
-    font-weight: 900 !important;
-    font-size: 16px !important;
+  .feedback-list{
+    height: 390px;
+    overflow-y:scroll; 
+  }
+  .feedback-list-h1{
+    text-align:center;
+    color: rgb(7, 57, 109);
+    padding-bottom:10px;
+    font-size: 2em; 
+  }
+  .feedback-list-p{
+    padding: 10px 10px;
+    border-bottom:1px solid gainsboro; 
+    display: block;
+  }
+  .feedback-list-p span{
+    color: #837024;
+    margin-left:4%;
+    font-weight: 700;
   }
 }

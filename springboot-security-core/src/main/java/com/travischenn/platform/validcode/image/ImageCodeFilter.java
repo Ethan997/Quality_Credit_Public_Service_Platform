@@ -1,6 +1,6 @@
 package com.travischenn.platform.validcode.image;
 
-import com.travischenn.platform.domain.ImageCode;
+import com.travischenn.platform.domain.VO.ImageCode;
 import com.travischenn.platform.exception.ValidateCodeException;
 import com.travischenn.platform.validcode.ValidCodeProcessor;
 import com.travischenn.platform.handler.authentication.AuthenticationFailedHandler;

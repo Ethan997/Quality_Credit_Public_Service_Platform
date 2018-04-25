@@ -18,20 +18,20 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum LoginEums {
 
-    LOGIN_IN_SUCCESS("100004" , "登录成功"),
+    LOGIN_IN_SUCCESS(100004 , "登录成功"),
 
-    LOGIN_IN_FAILED_BECAUSE_INVALID_USERNAME_PASSWORD("100005" , "登录失败,用户名密码错误"),
+    LOGIN_IN_FAILED_BECAUSE_INVALID_USERNAME_PASSWORD(100005 , "登录失败,用户名密码错误"),
 
-    LOGIN_IN_FAILED_BECAUSE_NULL_USERNAME("100006" , "登录失败,用户名对应的用户不存在"),
+    LOGIN_IN_FAILED_BECAUSE_NULL_USERNAME(100006 , "登录失败,用户名对应的用户不存在"),
 
-    LOGIN_OUT_SUCCESS("100007" , "登出成功"),
+    LOGIN_OUT_SUCCESS(100007 , "登出成功"),
 
-    LOGIN_OUT_FAILED("100008" , "登出失败");
+    LOGIN_OUT_FAILED(100008 , "登出失败");
 
     /**
      * 字段对应的编号
      */
-    private String code;
+    private Integer code;
 
     /**
      * 字段描述

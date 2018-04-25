@@ -1,7 +1,10 @@
 package com.travischenn.platform.config;
 
+import com.aliyun.oss.OSSClient;
 import com.travischenn.platform.properties.FileCenterProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -23,5 +26,14 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(value = FileCenterProperties.class)
 public class FileConfig {
 
+    @Autowired
+    private FileCenterProperties fileCenterProperties;
+
+    @Bean
+    public OSSClient ossClient(){
+        return new OSSClient(fileCenterProperties.getAlibaba().getEndPoint(),
+                             fileCenterProperties.getAlibaba().getAccessKeyId(),
+                             fileCenterProperties.getAlibaba().getAccessKeySecret());
+    }
 
 }

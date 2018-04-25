@@ -1,6 +1,6 @@
 package com.travischenn.platform.validcode.image;
 
-import com.travischenn.platform.domain.ImageCode;
+import com.travischenn.platform.domain.VO.ImageCode;
 import com.travischenn.platform.validcode.ValidCodeGenerator;
 import com.travischenn.platform.properties.SecurityProperties;
 import lombok.Getter;

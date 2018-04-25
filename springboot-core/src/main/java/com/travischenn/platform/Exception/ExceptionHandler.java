@@ -1,9 +1,10 @@
 package com.travischenn.platform.Exception;
 
-import com.travischenn.platform.domain.VO.BaseMessage;
+import com.travischenn.platform.domain.VO.ResultBean;
 import com.travischenn.platform.enums.ResultEnum;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * **************************************************************
@@ -22,8 +23,8 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public BaseMessage<Object> handle(Exception exception) {
-        return new BaseMessage<>(ResultEnum.FAILED , exception.getMessage());
+    public ResultBean<String> handle(Exception exception) {
+        return new ResultBean<>(ResultEnum.FAILED , exception.getMessage());
     }
 
 }

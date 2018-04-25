@@ -1,6 +1,5 @@
 package com.travischenn.platform.config;
 
-import com.travischenn.platform.Properties.NewsProperties;
 import com.travischenn.platform.handler.login.TCLoginOutSuccessHandler;
 import com.travischenn.platform.validcode.image.ImageCodeFilter;
 import com.travischenn.platform.handler.authentication.AuthenticationFailedHandler;
@@ -37,9 +36,6 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private SecurityProperties securityProperties;
 
     @Autowired
-    private NewsProperties newsProperties;
-
-    @Autowired
     private AuthenticationSuccessHandler travisChennAuthenticationSuccessHandler;
 
     @Autowired
@@ -58,59 +54,52 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private TCLoginOutSuccessHandler loginOutSuccessHandler;
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        ImageCodeFilter imageCodeFilter = new ImageCodeFilter();
-        imageCodeFilter.setAuthenticationFailedHandler(travisChennAuthenticationFailedHandler);
-        imageCodeFilter.setSecurityProperties(securityProperties);
-        imageCodeFilter.afterPropertiesSet();
-
-        SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
-        smsCodeFilter.setAuthenticationFailedHandler(travisChennAuthenticationFailedHandler);
-        smsCodeFilter.setSecurityProperties(securityProperties);
-        smsCodeFilter.afterPropertiesSet();
-
-        http.addFilterBefore( smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore( imageCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .formLogin()
-                    .loginPage("/authentication/require")
-                    .loginProcessingUrl("/authentication/form")
-                    .successHandler(travisChennAuthenticationSuccessHandler)
-                    .failureHandler(travisChennAuthenticationFailedHandler)
-                    .and()
+        http.formLogin()
+                .loginPage("/authentication/require")
+                .loginProcessingUrl("/authentication/form")
+                .successHandler(travisChennAuthenticationSuccessHandler)
+                .failureHandler(travisChennAuthenticationFailedHandler)
+                .and()
                 .rememberMe()
-                    .tokenValiditySeconds(securityProperties.getBrowser().getRememberMeSecond())
-                    .tokenRepository(persistentTokenRepository)
-                    .userDetailsService(userDetailsService)
-                    .and()
+                .tokenValiditySeconds(securityProperties.getBrowser().getRememberMeSecond())
+                .tokenRepository(persistentTokenRepository)
+                .userDetailsService(userDetailsService)
+                .and()
                 .logout()
-                    .logoutSuccessHandler(loginOutSuccessHandler)
-                    .deleteCookies("JESSIONID")
-                    .and()
+                .logoutSuccessHandler(loginOutSuccessHandler)
+                .deleteCookies("JESSIONID")
+                .and()
                 .authorizeRequests()
-                    .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-                    .antMatchers("/shutdown" ,
-                            newsProperties.getWeb().getUrl() ,
-                            newsProperties.getWeb().getStatics() ,
-                            newsProperties.getWeb().getPage() ,
-                            "/authentication/require" ,
-                            securityProperties.getBrowser().getLoginPageUrl() ,
-                            "/validCode/imageCode" ,
-                            "/validCode/smsCode").permitAll()
-                    .anyRequest()
-                    .authenticated()
-                    .and()
+                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
+                .antMatchers(
+                        "/authentication/require",
+                        "/page/font/**",
+                        "/assert/**",
+                        "/complaints",
+                        "/complaints/list",
+                        "/department/name",
+                        "/enterprise/search",
+                        "/news/pageable",
+                        "/news/info",
+                        "/rank/pageable",
+                        "/report/pageable",
+                        securityProperties.getBrowser().getLoginPageUrl()).permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
                 .csrf()
-                    .disable()
-                    .apply(smsCodeAuthenticationSecurityConfig)
-                    .and()
+                .disable()
+                .apply(smsCodeAuthenticationSecurityConfig)
+                .and()
                 .headers()
-                    .frameOptions()
-                    .disable();
+                .frameOptions()
+                .disable();
     }
 }

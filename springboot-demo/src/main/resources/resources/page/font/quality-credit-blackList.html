@@ -1,363 +1,273 @@
 <!DOCTYPE html>
-
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
+    <meta name="Ethan" content="ethan.997@foxmail.com">
+    <meta charset="utf-8" http-equiv="Content-Type" content="text/html;">
+    <meta name="keywords" content="象山影视城质量信用公共服务平台,质量失信黑名单">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>象山影视城质量信用公共服务平台</title>
-    <meta name="description" content="">
-    <link rel="icon" href="../../assert/data/img/logo[tab].png"/>
+    <link rel="icon" href="../../assert/data/img/logo[tab].png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assert/layui/css/layui.css">
     <link rel="stylesheet" href="../../assert/css/quality-credit-blackList.css">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../assert/js/font/jQuery.min.js"></script>
     <script src="../../assert/js/extends/jquery.templates_beta1_jquery.tmpl.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="../../assert/js/font/blackList.js" ></script>
 </head>
 
 <body>
-<!--[if lt IE 7]>
+    <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a>
     to improve your experience.</p>
 <![endif]-->
-<!-- 顶部导航 -->
-<nav class="nav-top">
-    <div class="layui-form nav-logo" style="margin-top: 15px">
-        <div class="layui-form-select">
-            <div class="layui-select-title">
-                <a href="index.html">
-                    <img src="../../assert/data/img/logo_no_font.png" class="logo" style="height:30px;width:30px;padding-right:10px;">象山影视城质量信用公共服务平台</a>
-            </div>
-        </div>
-    </div>
-    <ul class="layui-nav" lay-filter="">
-        <li class="layui-nav-item false-logo">
-            <a href="">
-                <img src="../../assert/data/img/logo_no_font.png" class="logo" style="height:60px;width:60px;">象山影视城质量信用公共服务平台</a>
-        </li>
-
-        <li class="layui-nav-item">
-            <a href="javascript:;">新闻资讯</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="news-policy.html">政策法规文件</a>
-                </dd>
-                <dd>
-                    <a href="news-dynamic.html">工作动态</a>
-                </dd>
-                <dd>
-                    <a href="news-redList.html">红榜(光荣榜)</a>
-                </dd>
-                <dd>
-                    <a href="news-msg.html">信息公开</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">质量信用管理</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="quality-credit-commitment.html">质量信用承诺</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-archives.html">质量信用档案</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-responsibility.html">社会责任报告</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-blackList.html">质量失信黑名单</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">服务标准化</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="standardization.html">影视文化与旅游服务标准体系</a>
-                </dd>
-                <dd>
-                    <a href="exhibition.html">成果展示</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">品牌建设</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="brand-construction-appraise.html">区域品牌价值评价</a>
-                </dd>
-                <dd>
-                    <a href="brand-actives.html">质量管理与品牌建设交流活动</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">服务质量</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="service-complaints.html">顾客投诉平台</a>
-                </dd>
-                <dd>
-                    <a href="service-quility-movies.html">宁波影视文化产业服务质量状况分析报告</a>
-                </dd>
-                <dd>
-                    <a href="service-qulity-satisfaction.html">顾客满意度调查报告</a>
-                </dd>
-            </dl>
-        </li>
-
-
-    </ul>
-</nav>
-
-<nav>
-    <div class="nav-side-link layui-anim layui-anim-fadein">
-        <div class="layui-form nav-logo">
+    <!-- 顶部导航 -->
+    <nav class="nav-top">
+        <div class="layui-form nav-logo" style="margin-top: 15px">
             <div class="layui-form-select">
                 <div class="layui-select-title">
                     <a href="index.html">
-                        <img src="../../assert/data/img/logo.png" class="logo"
-                             style="height:60px;width:60px;line-height:60px;padding-right:10px;">象山影视城质量信用公共服务平台</a>
+                        <img src="../../assert/data/img/logo_no_font.png" class="logo" style="height:30px;width:30px;padding-right:10px;">象山影视城质量信用公共服务平台</a>
                 </div>
             </div>
         </div>
-        <button class="nav-side-link-btn" id="nav-side-link-btn">
-            <img src="../../assert/data/img/菜单.svg" alt=""></button>
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item false-logo">
+                <a href="">
+                    <img src="../../assert/data/img/logo_no_font.png" class="logo" style="height:60px;width:60px;">象山影视城质量信用公共服务平台</a>
+            </li>
+
+            <li class="layui-nav-item">
+                <a href="javascript:;">新闻资讯</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="news-policy.html">政策法规文件</a>
+                    </dd>
+                    <dd>
+                        <a href="news-dynamic.html">工作动态</a>
+                    </dd>
+                    <dd>
+                        <a href="news-redList.html">红榜(光荣榜)</a>
+                    </dd>
+                    <dd>
+                        <a href="news-msg.html">信息公开</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">质量信用管理</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="quality-credit-commitment.html">质量信用承诺</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-archives.html">质量信用档案</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-responsibility.html">社会责任报告</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-blackList.html">质量失信黑名单</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">服务标准化</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="standardization.html">影视文化与旅游服务标准体系</a>
+                    </dd>
+                    <dd>
+                        <a href="exhibition.html">成果展示</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">品牌建设</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="brand-construction-appraise.html">区域品牌价值评价</a>
+                    </dd>
+                    <dd>
+                        <a href="brand-actives.html">质量管理与品牌建设交流活动</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">服务质量</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="service-quility-movies.html">宁波影视文化产业服务质量状况分析报告</a>
+                    </dd>
+                    <dd>
+                        <a href="service-qulity-satisfaction.html">顾客满意度调查报告</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./service-complaints.html">顾客投诉平台</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <nav>
+        <div class="nav-side-link layui-anim layui-anim-fadein">
+            <div class="layui-form nav-logo">
+                <div class="layui-form-select">
+                    <div class="layui-select-title">
+                        <a href="index.html">
+                            <img src="../../assert/data/img/logo.png" class="logo" style="height:60px;width:60px;line-height:60px;padding-right:10px;">象山影视城质量信用公共服务平台</a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-side-link-btn" id="nav-side-link-btn">
+                <img src="../../assert/data/img/菜单.svg" alt="">
+            </button>
+        </div>
+
+        <ul class="layui-nav layui-nav-tree layui-nav-side nav-side layui-anim layui-anim-scale" lay-filter="">
+
+            <li class="layui-nav-item">
+                <a href="javascript:;">新闻资讯</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="news-policy.html">政策法规文件</a>
+                    </dd>
+                    <dd>
+                        <a href="news-dynamic.html">工作动态</a>
+                    </dd>
+                    <dd>
+                        <a href="news-redList.html">红榜(光荣榜)</a>
+                    </dd>
+                    <dd>
+                        <a href="news-msg.html">信息公开</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">质量信用管理</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="quality-credit-commitment.html">质量信用承诺</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-archives.html">质量信用档案</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-responsibility.html">社会责任报告</a>
+                    </dd>
+                    <dd>
+                        <a href="quality-credit-blackList.html">质量失信黑名单</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">服务标准化</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="standardization.html">影视文化与旅游服务标准体系</a>
+                    </dd>
+                    <dd>
+                        <a href="exhibition.html">成果展示</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">品牌建设</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="brand-construction-appraise.html">区域品牌价值评价</a>
+                    </dd>
+                    <dd>
+                        <a href="brand-actives.html">质量管理与品牌建设交流活动</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">服务质量</a>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a href="service-quility-movies.html">宁波影视文化产业服务质量状况分析报告</a>
+                    </dd>
+                    <dd>
+                        <a href="service-qulity-satisfaction.html">顾客满意度调查报告</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./service-complaints.html">顾客投诉平台</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="section-head-background">
+
+        <img src="../../assert/data/img/quality-credit-management.png" class="page-header__title-decoration" alt="">
+
+
+        <div class="news-nav ">
+            <span class="layui-breadcrumb" lay-separator="|">
+                <a href="quality-credit-commitment.html" class="news-nav-title">质量信用承诺</a>
+                <a href="quality-credit-archives.html" class="news-nav-title">质量信用档案</a>
+                <a href="quality-credit-responsibility.html" class="news-nav-title">社会责任报告</a>
+                <a href="quality-credit-blackList.html" class="news-nav-title" id="nav-seleted">质量失信黑名单</a>
+            </span>
+        </div>
     </div>
+    <img src="../../assert/data/img/blackList.svg" class="ranking-img" alt="">
+    <section class="layui-table ranking" id="ranking">
 
-    <ul class="layui-nav layui-nav-tree layui-nav-side nav-side layui-anim layui-anim-scale" lay-filter="">
+        <table>
+            <colgroup>
+                <col width="200">
+                <col width="500">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th id="ranking-th">
+                        <img src="../../assert/data/img/blackList-top.svg" width='30px' height='30px' style="padding:10px 0;" alt="排名">
+                    </th>
+                    <th  style="font-size:24px;padding:16px 0 10px 0;text-align: center">名称</th>
+                </tr>
+            </thead>
 
-        <li class="layui-nav-item">
-            <a href="javascript:;">新闻资讯</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="news-policy.html">政策法规文件</a>
-                </dd>
-                <dd>
-                    <a href="news-dynamic.html">工作动态</a>
-                </dd>
-                <dd>
-                    <a href="news-redList.html">红榜(光荣榜)</a>
-                </dd>
-                <dd>
-                    <a href="news-msg.html">信息公开</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">质量信用管理</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="quality-credit-commitment.html">质量信用承诺</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-archives.html">质量信用档案</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-responsibility.html">社会责任报告</a>
-                </dd>
-                <dd>
-                    <a href="quality-credit-blackList.html">质量失信黑名单</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">服务标准化</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="standardization.html">影视文化与旅游服务标准体系</a>
-                </dd>
-                <dd>
-                    <a href="exhibition.html">成果展示</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">品牌建设</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="brand-construction-appraise.html">区域品牌价值评价</a>
-                </dd>
-                <dd>
-                    <a href="brand-actives.html">质量管理与品牌建设交流活动</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">服务质量</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a href="service-complaints.html">顾客投诉平台</a>
-                </dd>
-                <dd>
-                    <a href="service-quility-movies.html">宁波影视文化产业服务质量状况分析报告</a>
-                </dd>
-                <dd>
-                    <a href="service-qulity-satisfaction.html">顾客满意度调查报告</a>
-                </dd>
-            </dl>
-        </li>
-
-    </ul>
-</nav>
-
-<div class="section-head-background">
-
-    <img src="../../assert/data/img/quality-credit-management.png" class="page-header__title-decoration" alt="">
+            <tbody id="blackList"></tbody>
+        </table>
+    </section>
 
 
-    <div class="news-nav ">
+    <footer>
+        <div class="footer-msg">
       <span class="layui-breadcrumb" lay-separator="|">
-        <a href="quality-credit-commitment.html" class="news-nav-title">质量信用承诺</a>
-        <a href="quality-credit-archives.html" class="news-nav-title" >质量信用档案</a>
-        <a href="quality-credit-responsibility.html" class="news-nav-title">社会责任报告</a>
-        <a href="quality-credit-blackList.html" class="news-nav-title" id="nav-seleted" >质量失信黑名单</a>
+        <a href="javascript:void(0);">网站建设</a>
+        <a href="javascript:void(0);">产品质量</a>
+        <a href="javascript:void(0);">服务质量</a>
+        <a href="javascript:void(0);">标准化</a>
+        <a href="javascript:void(0);">课程培训</a>
+        <a href="javascript:void(0);">质量改进</a>
+        <a href="javascript:void(0);">质量策划</a>
       </span>
-    </div>
-</div>
-<img src="../../assert/data/img/blackList.svg" class="ranking-img" alt="">
-<section class="layui-table ranking" id="ranking">
-
-    <table>
-        <colgroup>
-            <col width="200">
-            <col width="500">
-            <col>
-        </colgroup>
-        <thead>
-        <tr>
-            <th id="ranking-th">
-                <img src="../../assert/data/img/blackList-top.svg" width='30px' height='30px' style="padding:10px 0;"
-                     alt="排名"></th>
-            <th id="ranking-th" style="font-size:24px;padding:16px 0 10px 0;">名称</th>
-        </tr>
-        </thead>
-
-        <tbody id="blackList"></tbody>
-    </table>
-</section>
-
-
-<footer>
-    <div class="footer-msg">
-      <span class="layui-breadcrumb" lay-separator="|">
-        <a href="">网站建设</a>
-        <a href="">产品质量</a>
-        <a href="">服务质量</a>
-        <a href="">标准化</a>
-        <a href="">课程培训</a>
-        <a href="">质量改进</a>
-        <a href="">质量策划</a>
-      </span>
-        <h3>杭州尚量标准化管理技术咨询公司 ZhiHui Inc. 2017-2020 版权所有翻版必究</h3>
-    </div>
-</footer>
+            <h3>Copyright ©XXXXXXXX有限公司All Right Reserved.</h3>
+            <h4>技术支持：XXXXXXXX有限公司</h4>
+        </div>
+    </footer>
 </body>
 <script src="../../assert/layui/layui.js"></script>
-<script>
-    $(document).ready(function () {
-
-        var markup =
-            "<tr><td style='color:#96734A;font-size:16px;font-weight:bold;'><img src='../../assert/data/img/blackList-user.svg' width='30px' height='30px' alt='' style='padding-right:6px;' >${category}</td><td style=‘color:#96734A; font-weight:bold;‘>${title}</td></tr>";
-
-        /* Compile the markup as a named template */
-        $.template("blackListTemplate", markup);
-
-        function getMovies(genre, skip, top) {
-            $.ajax({
-                dataType: "jsonp",
-                url: 'http://api.jisuapi.com/news/get?appkey=ac484fd4493c9fe8&num=10',
 
 
-                success: function (data) {
-                    /* Get the movies array from the data */
-                    $("#ranking").fadeIn(3000);
-                    var movies = data.result.list;
-
-                    /* Remove current set of movie template items */
-                    $("#blackListList").empty();
-
-                    /* Render the template items for each movie
-                    and insert the template items into the "movieList" */
-                    $.tmpl("blackListTemplate", movies)
-                        .prependTo("#blackList");
-                },
-                error:function(){
-                    toastr.error("加载失败!"); 
-                }
-            });
-        };
-        var state = 0;
-        $("#nav-side-link-btn").click(() => {
-
-            if (state === 0) {
-                $(".nav-side").css("display", "block");
-                $(".nav-side").css({
-                    "position": "absolute",
-                    "top": "60px"
-                });
-                state = 1;
-            } else if (state === 1) {
-                $(".nav-side").css("display", "none");
-                state = 0;
-            }
-        })
-        getMovies();
-    });
-
-</script>
-<script>
-    layui.use('element', function () {
-        var element = layui.element;
-
-    });
-    layui.use('carousel', function () {
-        var carousel = layui.carousel;
-        //建造实例
-        carousel.render({
-            elem: '#test1',
-            width: '100%' //设置容器宽度
-            ,
-            arrow: 'always', //始终显示箭头
-            height: '500px'
-        });
-        layui.use('laypage', function () {
-            var laypage = layui.laypage;
-
-            //执行一个laypage实例
-            laypage.render({
-                elem: 'pagination' //注意，这里的 test1 是 ID，不用加 # 号
-                ,
-                count: 50 //数据总数，从服务端得到
-            });
-        });
-    });
-
-</script>
-<script>
-
-
-</script>
 
 </html>

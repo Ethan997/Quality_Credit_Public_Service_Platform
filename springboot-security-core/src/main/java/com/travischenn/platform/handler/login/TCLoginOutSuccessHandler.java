@@ -1,9 +1,8 @@
 package com.travischenn.platform.handler.login;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.travischenn.platform.domain.VO.BaseMessage;
+import com.travischenn.platform.domain.VO.ResultBean;
 import com.travischenn.platform.enums.LoginEums;
-import com.travischenn.platform.enums.ResultEnum;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
@@ -30,7 +29,7 @@ public class TCLoginOutSuccessHandler implements LogoutSuccessHandler {
     @Override
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(objectMapper.writeValueAsString(new BaseMessage<>(LoginEums.LOGIN_OUT_SUCCESS.getCode() , LoginEums.LOGIN_OUT_SUCCESS.getDescribe() ,"")));
+        response.getWriter().write(objectMapper.writeValueAsString(new ResultBean<>(LoginEums.LOGIN_OUT_SUCCESS.getCode() , LoginEums.LOGIN_OUT_SUCCESS.getDescribe() ,"")));
     }
 
 }

@@ -1,6 +1,6 @@
 package com.travischenn.platform.validcode.mobile;
 
-import com.travischenn.platform.domain.SmsCode;
+import com.travischenn.platform.domain.VO.SmsCode;
 import com.travischenn.platform.enums.ValidCodeEnum;
 import com.travischenn.platform.exception.ValidateCodeException;
 import com.travischenn.platform.handler.authentication.AuthenticationFailedHandler;

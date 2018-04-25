@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑企业信息</title>
+</head>
+
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<body>
+
+<div style="margin-top: 20px;margin-left: 50px;margin-bottom:30px">
+    <div style="font-size: 25px;color: grey;">编辑企业信息</div>
+    <hr class="layui-bg-gray">
+</div>
+
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">企业名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" required="" lay-verify="required" placeholder="请输入企业名称" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">所属行业</label>
+        <div class="layui-input-block">
+            <input type="text" name="industry" required="" lay-verify="required" placeholder="请输入企业名称" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">机构代码</label>
+        <div class="layui-input-block">
+            <input type="text" name="agencyCode" required="" lay-verify="required" placeholder="请输入企业名称" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">注册时间</label>
+        <div class="layui-input-block">
+            <input id="registration_time" class="layui-input" name="registrationTime" type="text"  required="" lay-verify="required" placeholder="请选择注册时间">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">经营范围</label>
+        <div class="layui-input-block">
+            <input type="text" name="businessScope" required="" lay-verify="required" placeholder="请输入经营范围" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">行政区域</label>
+        <div class="layui-input-block">
+            <input type="text" name="administrativeDivision" required="" lay-verify="required" placeholder="请输入行政区域" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">法人代表</label>
+        <div class="layui-input-block">
+            <input type="text" name="legalRepresentative" required="" lay-verify="required" placeholder="请输入法人代表" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">通讯地址</label>
+        <div class="layui-input-block">
+            <input type="text" name="location" required="" lay-verify="required" placeholder="请输入通讯地址" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">责任报告</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <input type="text" id="srrUrl" name="srrUrl" placeholder="社会责任报告地址" autocomplete="off" class="layui-input" readonly>
+        </div>
+        <div class="layui-word-aux" style="padding: 0;">
+            <button id="upload_srrUrl" type="button" class="layui-btn">
+                <i class="layui-icon">&#xe67c;</i>更新文件
+            </button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">信用档案</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <input type="text" id="qcfUrl" name="qcfUrl" placeholder="质量信用档案地址" autocomplete="off" class="layui-input" readonly>
+        </div>
+        <div class="layui-word-aux" style="padding: 0;">
+            <button id="upload_qcfUrl" type="button" class="layui-btn">
+                <i class="layui-icon">&#xe67c;</i>更新文件
+            </button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">信用承诺</label>
+        <div class="layui-input-inline" style="width: 500px">
+            <input type="text" id="srpUrl" name="srpUrl" placeholder="质量信用承诺地址" autocomplete="off" class="layui-input" readonly>
+        </div>
+        <div class="layui-word-aux" style="padding: 0;">
+            <button id="upload_srpUrl" type="button" class="layui-btn">
+                <i class="layui-icon">&#xe67c;</i>更新文件
+            </button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="edit_user_detail_filter">提交修改</button>
+        </div>
+    </div>
+</form>
+
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/edit-enterprise-detail.js"></script>
+</body>
+</html>

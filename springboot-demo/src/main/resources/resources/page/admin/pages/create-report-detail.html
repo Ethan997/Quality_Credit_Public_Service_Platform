@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加报告</title>
+</head>
+
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+<body>
+
+<div style="margin: 20px 50px 30px;">
+    <div style="font-size: 25px;color: grey;">增加报告</div>
+    <hr class="layui-bg-gray">
+</div>
+
+<form class="layui-form layui-form-pane" action="" style="margin-left: 50px;margin-right: 50px">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">报告类型</label>
+        <div class="layui-input-block" id="create_report_detail_select">
+            <select id="create_report_details" name="create_report_details" lay-filter="create_report_detail_select_filter">
+                <option value="NULL" >请选择</option>
+                <option value="SOCIAL_RESPONSIBILITY_REPORT" >社会责任报告</option>
+                <option value="ANALYSIS_OF_SERVICE_QUALITY_OF_NINGBO_FILM_CULTURE_INDUSTRY">宁波影视文化产业服务质量状况分析报告</option>
+                <option value="CUSTOMER_SATISFACTION_REPORT">顾客满意度调查报告</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="width: 100%;text-align: center">
+        <a id="upload_report_href" class="layui-btn" style="width: 60%;margin-top: 30px;margin-bottom: 30px" onclick="select_check()">
+            选择文件并提交
+        </a>
+    </div>
+
+</form>
+
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/create-report-detail.js"></script>
+</body>
+
+</html>

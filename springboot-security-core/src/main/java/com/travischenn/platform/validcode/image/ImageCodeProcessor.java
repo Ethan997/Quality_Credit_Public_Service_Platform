@@ -1,6 +1,6 @@
 package com.travischenn.platform.validcode.image;
 
-import com.travischenn.platform.domain.ImageCode;
+import com.travischenn.platform.domain.VO.ImageCode;
 import com.travischenn.platform.validcode.AbstractValidCodeProcessorImpl;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;

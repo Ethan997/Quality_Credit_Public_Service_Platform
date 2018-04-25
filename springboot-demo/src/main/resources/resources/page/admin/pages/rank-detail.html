@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>榜单管理</title>
+</head>
+
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<body>
+
+<blockquote class="layui-elem-quote news_search">
+    <form class="layui-form" lay-filter="create_org_list" action="">
+        <div class="layui-inline">
+            <div class="layui-form">
+                <div class="layui-input-inline" style="width:250px">
+                    <select name="rank_detail_select" lay-filter='rank_detail_select_filter'>
+                        <option value="HORNOR">光荣榜</option>
+                        <option value="BLANK">黑名单</option>
+                    </select>
+                </div>
+                <a class="layui-btn" onclick="table_reload(rank_detail_option)">查询</a>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <a class="layui-btn layui-btn-normal" onclick="create_tabs({id:16,icon:'fa-bell-slash-o',title:'发表新内容',url:'pages/create-rank-detail.html'})">增加榜单</a>
+        </div>
+        <div class="layui-inline">
+            <a class="layui-btn layui-btn-danger" onclick="table_delete(rank_detail_option)">删除榜单</a>
+        </div>
+    </form>
+</blockquote>
+
+<table id="rank_detail_table_dom_id" lay-filter="rank_detail_table_filter"></table>
+
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/rank-detail.js"></script>
+</body>
+</html>

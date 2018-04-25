@@ -53,12 +53,39 @@ layui.define(['element', 'nprogress', 'form', 'table', 'loader', 'tab', 'navbar'
                         //console.log(data.index); //得到当前Tab的所在下标
                         //console.log(data.elem); //得到当前的Tab大容器
                     },
-                    closeBefore: function(data) { //关闭选项卡之前触发
-                        // console.log(data);
-                        // console.log(data.icon); //显示的图标
-                        // console.log(data.id); //lay-id
-                        // console.log(data.title); //显示的标题
-                        // console.log(data.url); //跳转的地址
+                    closeBefore: function(data) {
+
+                        // 获取当前关闭的 Tab
+                        var tab_id = data.id;
+
+                        // 当关闭的 Tab ID = (4:增加企业 | 5: 编辑企业 | 7: 增加部门 | 8: 编辑部门 ) 时进行处理
+
+                        if(tab_id === 4){
+
+                        }else if(tab_id === 5){
+
+                        }else if(tab_id === 7){
+
+                        }else if(tab_id === 8){
+
+                        }
+
+                        // 获取当前页面是否已经提交
+
+                        // 已经提交则直接关闭
+//                      |
+//                      |
+                        // 如果没有提交则判断表单项是否进行了修改
+
+                        // 如果没有修改 , 直接关闭
+//                      |
+//                      |
+                        // 如果做了修改 , 如果是新增则删除新增的文件.
+//                      |
+//                      |
+                        //               如果是编辑则让用户必须进行提交否则无法关闭
+
+                        log(data);
                         return true; //返回true则关闭
                     }
                 }).render();
@@ -79,11 +106,7 @@ layui.define(['element', 'nprogress', 'form', 'table', 'loader', 'tab', 'navbar'
                         //console.log(data.elem); //得到当前的Tab大容器
                     },
                     closeBefore: function(data) { //关闭选项卡之前触发
-                        // console.log(data);
-                        // console.log(data.icon); //显示的图标
-                        // console.log(data.id); //lay-id
-                        // console.log(data.title); //显示的标题
-                        // console.log(data.url); //跳转的地址
+                        console.log(data);
                         return true; //返回true则关闭
                     }
                 }).render();

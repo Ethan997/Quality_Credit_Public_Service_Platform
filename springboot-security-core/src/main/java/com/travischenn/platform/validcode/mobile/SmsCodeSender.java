@@ -2,7 +2,7 @@ package com.travischenn.platform.validcode.mobile;
 
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;
-import com.travischenn.platform.domain.SmsCode;
+import com.travischenn.platform.domain.VO.SmsCode;
 import org.springframework.web.bind.ServletRequestBindingException;
 
 import javax.servlet.http.HttpServletRequest;

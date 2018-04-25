@@ -1,25 +1,26 @@
 package com.travischenn.platform.controller;
 
-import com.travischenn.platform.domain.VO.BaseMessage;
+import com.travischenn.platform.domain.DO.FileInfo;
+import com.travischenn.platform.domain.VO.ResultBean;
 import com.travischenn.platform.enums.ResultEnum;
+import com.travischenn.platform.repository.FileInfoRepository;
 import com.travischenn.platform.service.AlibabaOSSService;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * **************************************************************
  * 公司名称    : 杭州质慧信息技术有限公司
  * 系统名称    : springboot-starter
- * 类 名 称    :
- * 功能描述    :
+ * 类 名 称    : FileController
+ * 功能描述    : 文件控制器
  * 作 者 名    : @Author TravisChenn (陈齐康)
  * 开发日期    : 2018/1/8 15:05
  * Created    : IntelliJ IDEA
@@ -30,28 +31,60 @@ import java.io.IOException;
  * **************************************************************
  */
 
-@Controller
+@RestController
 @RequestMapping("/file")
 public class FileController {
 
     @Autowired
     private AlibabaOSSService alibabaOSSService;
 
-    @RequestMapping(value = "/upload/img", method = RequestMethod.POST , produces = "application/json;charset=UTF-8")
-    @ResponseBody
-    public BaseMessage<String> uploadImg(MultipartFile file , @Param("folder") String folder) {
+    @Autowired
+    private FileInfoRepository fileInfoRepository;
 
-        String alibabaOSSFileUrl;
+    /**
+     * 上传文件
+     *
+     * @param file   文件对象
+     * @param folder OSS 前置路径
+     * @param exist  文件是否需要进行存在性检查
+     *
+     * @return OSS 文件路径
+     */
+    @PostMapping(produces = "application/json;charset=UTF-8")
+    @RequestMapping("/upload")
+    public ResultBean<String> upload(@RequestParam MultipartFile file, @Param("folder") String folder , @RequestParam("exist") boolean exist) {
+        return new ResultBean<>(ResultEnum.SUCCESS, alibabaOSSService.upload(file, folder , exist));
+    }
 
-        try {
-            alibabaOSSFileUrl = alibabaOSSService.uploadFile(file, folder);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new BaseMessage<>(ResultEnum.FAILED , "上传失败,失败原因:" + e.getMessage());
-        }
+    /**
+     * 批量删除文件
+     *
+     * @param ids   删除对象 ID 字符串
+     */
+    @DeleteMapping(produces = "application/json;charset=UTF-8")
+    @RequestMapping("/ids")
+    public ResultBean<String> upload(@NotBlank @RequestParam("ids") String ids) {
 
-        return new BaseMessage<>(ResultEnum.SUCCESS , alibabaOSSFileUrl);
+        // 分割需要删除的 ID
+        List<String> list = Arrays.asList(ids.split(","));
 
+        // 准备 key 容器
+        List<String> os_key_list = new ArrayList<>();
+
+        list.forEach(id->{
+
+            FileInfo fileInfo = fileInfoRepository.findOne(Integer.parseInt(id));
+            fileInfoRepository.delete(Integer.parseInt(id));
+
+            if(fileInfo != null){
+                os_key_list.add(alibabaOSSService.getKeyFromUrl(fileInfo.getHref()));
+            }
+
+        });
+
+        alibabaOSSService.deleteFiles(os_key_list);
+
+        return new ResultBean<>(ResultEnum.SUCCESS, "");
     }
 
 }

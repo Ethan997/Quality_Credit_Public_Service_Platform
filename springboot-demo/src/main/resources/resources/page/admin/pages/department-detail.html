@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+</head>
+
+<link rel="stylesheet" href="../../../assert/layui/css/layui.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<body>
+
+<blockquote class="layui-elem-quote" style="margin-bottom: 0;margin-top: 10px">
+    <div class="layui-inline">
+        <a class="layui-btn" onclick="create_tabs({id:7,icon:'fa-free-code-camp',title:'增加部门',url:'pages/create-department-detail.html'})">增加部门</a>
+    </div>
+    <div class="layui-inline">
+        <a class="layui-btn layui-btn-normal" onclick="create_tabs_by_id(department_detail_option , {id:8,icon:'fa-crop',title:'编辑部门信息',url:'pages/edit-department-detail.html'} , department_detail_option_init_id)">编辑部门信息</a>
+    </div>
+    <div class="layui-inline">
+        <a class="layui-btn layui-btn-danger" onclick="table_delete(department_detail_option)">删除选中部门</a>
+    </div>
+</blockquote>
+
+<table id="department_detail_dom_id" lay-filter="department_detail_table_filter"></table>
+
+<script src="../../../assert/layui/layui.all.js"></script>
+<script src="../../../assert/js/admin/travischenn.js"></script>
+<script src="../../../assert/js/admin/department-detail.js"></script>
+<script type="text/html" id="pStandardUrl_tpl">
+    <span name="{{d.pstandardUrl}}" onclick="img_render(this)">点击查看</span>
+</script>
+<script type="text/html" id="tStandardUrl_tpl">
+    <span name="{{d.tstandardUrl}}" onclick="img_render(this)">点击查看</span>
+</script>
+<script type="text/html" id="isPublic_tpl">
+    {{#  if(d.isPublic === "true"){ }}
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <div>
+                <input type="checkbox" lay-skin="switch" lay-text="开|" lay-filter="department_detail_is_public_tpl" checked disabled>
+            </div>
+        </div>
+    </form>
+    {{#  } else { }}
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <div>
+                <input type="checkbox" lay-skin="switch" lay-text="开|" lay-filter="mandatoryUnlockAuthoritySwitch" disabled>
+            </div>
+        </div>
+    </form>
+    {{#  } }}
+</script>
+</body>
+</html>

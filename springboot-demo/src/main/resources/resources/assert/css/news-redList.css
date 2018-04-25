@@ -1,4 +1,4 @@
-@media (min-width: 1290px) {
+@media (min-width: 1016.1px) {
 
   * {
     -webkit-font-smoothing: subpixel-antialiased;
@@ -42,10 +42,6 @@
   .nav-logo a {
     color: #B8B9BD;
   }
-  /* .banner {
-    padding-top: 60px;
-  } */
-
   .nav-search-btn {
     position: relative;
     left: 100%;
@@ -76,7 +72,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -89,7 +85,9 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
     color: white!important;
@@ -113,13 +111,6 @@
   }
 
 
-  .news {
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    border-bottom: 1px solid gainsboro;
-  }
-
   .news-nav {
     text-align: center;
     padding: 50px 0 40px 0;
@@ -130,34 +121,6 @@
     font-weight: bold;
   }
 
-  .news-content {
-    padding-top: 40px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-
-  .news-title {
-    font-size: 26px;
-    font-weight: 700;
-  }
-  .news-title a{
-    color: rgb(7, 57, 109);
-  }
-
-  .news-title a:hover {
-    color: #5FB878;
-  }
-
-  .meta-author {
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-  }
-  .pagination{
-    padding-top:120px;
-    padding-bottom:120px;
-    text-align: center;
-  }
   #nav-seleted{
     color: #5FB878 !important;
   }
@@ -187,14 +150,14 @@
   }
 }
 
-
+@media (max-width: 1016px) {
   * {
     -webkit-font-smoothing: subpixel-antialiased;
   }
 
   body {
     background-color: white;
-    font-family:  "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 300;
   }
 
@@ -203,20 +166,24 @@
     right: 1em;
     padding-left: 1em;
   }
-
+  .nav-top{
+    display: none;
+  }
   .nav-side {
     display: none;
   }
-  .nav-side-link{
+
+  .nav-side-link {
     height: 60px;
-    background-color: #393D49;
+    background-color: #252d38;
   }
-  .nav-side-link-btn{
-    background-color: #393D49;
+
+  .nav-side-link-btn {
+    background-color: #252d38;
     height: 40px;
     width: 40px;
-    margin:10px 0 0 10px; 
-    border-radius:8px; 
+    margin: 10px 0 0 10px;
+    border-radius: 8px;
     position: absolute;
     right: 1em;
   }
@@ -237,9 +204,6 @@
   .nav-logo a {
     color: #B8B9BD;
   }
-  /* .banner {
-    padding-top: 60px;
-  } */
 
   .nav-search-btn {
     position: relative;
@@ -248,7 +212,6 @@
     margin-left: 10px;
   }
 
-
   .layui-carousel {
     height: 1000px;
   }
@@ -256,9 +219,6 @@
   .service-part:hover {
     color: #837024;
   }
-
-
-
 
   .service-img {
     width: 8em;
@@ -271,7 +231,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -284,10 +244,12 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
-    color: white!important;
+    color: white !important;
   }
 
   .page-title {
@@ -308,12 +270,6 @@
   }
 
 
-  .news {
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    border-bottom: 1px solid gainsboro;
-  }
 
   .news-nav {
     text-align: center;
@@ -325,61 +281,34 @@
     font-weight: bold;
   }
 
-  .news-content {
-    padding-top: 40px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-
-  .news-title {
-    font-size: 26px;
-    font-weight: 700;
-  }
-  .news-title a{
-    color: rgb(7, 57, 109);
-  }
-
-  .news-title a:hover {
-    color: #5FB878;
-  }
-
-  .meta-author {
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-  }
-  /* .news-linkBtn{
-    display: block;
-    margin: 0 auto;
-  } */
-  .pagination{
-    padding-top:120px;
-    padding-bottom:120px;
-    text-align: center;
-  }
-  #nav-seleted{
+  #nav-seleted {
     color: #5FB878 !important;
   }
-  .ranking{
+
+  .ranking {
     width: 50%;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 120px;
   }
-  table{
+
+  table {
     margin: 0 auto;
-    padding-top:20px; 
+    padding-top: 20px;
   }
-  td{
+
+  td {
     text-align: center;
   }
-  #ranking-th{
+
+  #ranking-th {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
-    
+
   }
-  .ranking-img{
+
+  .ranking-img {
     padding-top: 90px;
     display: block;
     margin: 0 auto;

@@ -1,4 +1,4 @@
-@media (min-width: 1290px) {
+@media (min-width: 1030.1px) {
 
 
   * {
@@ -71,7 +71,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -84,7 +84,9 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
     color: white !important;
@@ -149,7 +151,11 @@
   .news-title a:hover {
     color: #5fb878;
   }
-
+  .pagination {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
   .meta-author {
     font-size: 14px;
     font-weight: 400;
@@ -182,7 +188,7 @@
     line-height: 27px;
   }
 }
-@media (max-width: 1290px) {
+@media (max-width: 1030px) {
 
 
   * {
@@ -211,10 +217,10 @@
   }
   .nav-side-link{
     height: 60px;
-    background-color: #393D49;
+    background-color: #252d38;
   }
   .nav-side-link-btn{
-    background-color: #393D49;
+    background-color: #252d38;
     height: 40px;
     width: 40px;
     margin:10px 0 0 10px; 
@@ -265,7 +271,7 @@
 
   footer {
     height: 200px;
-    background-color: #323640;
+    background-color: #252d38;
     padding-top: 30px;
   }
 
@@ -278,7 +284,9 @@
     padding: 20px 0;
     color: white;
   }
-
+  .footer-msg h4 {
+    color: white;
+  }
   .footer-msg a {
     font-size: 16px;
     color: white !important;
@@ -343,7 +351,11 @@
   .news-title a:hover {
     color: #5fb878;
   }
-
+  .pagination {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
   .meta-author {
     font-size: 14px;
     font-weight: 400;
@@ -355,7 +367,7 @@
   }
 
   article {
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     padding: 30px 0;
   }

@@ -1,3 +1,4 @@
+import com.travischenn.platform.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +18,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created    : IntelliJ IDEA
  * **************************************************************
  */
+@SpringBootTest
+@RunWith(SpringJUnit4ClassRunner.class)
 public class da {
-
-    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
-    @Test
-    public void test(){
-        String encode = passwordEncoder.encode("456789");
-        System.out.println(encode);
-    }
 
 }
